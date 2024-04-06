@@ -1,0 +1,104 @@
+body.translator-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Align content to the start */
+    align-items: top;
+    height: auto; /* Allow body to grow as needed */
+    min-height: 100vh; /* Ensure it fills at least the full viewport height */
+    background-image: url('image.webp'); /* Adjust the path as necessary */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    margin-top: 20px; /* Add some space from the top */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Rest of your CSS remains unchanged */
+
+.controls {
+    margin: 20px 0;
+}
+
+.select-group {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.language-select, .action-button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-button {
+    grid-column: span 2;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.status {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #dee2e6;
+}
+
+@media (max-width: 480px) {
+    .select-group {
+        grid-template-columns: 1fr; /* Stack dropdowns vertically on smaller screens */
+    }
+    .action-button {
+        grid-column: span 1;
+    }
+}
+
+.pulsating-circle {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
