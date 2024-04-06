@@ -114,7 +114,7 @@ function synthesizeSpeech(text, langCode) {
   console.log(`Synthesizing: "${text}" in ${langCode}`);
 
   // Optional: Configure other properties of the utterance
-  utterance.rate = 1; // Speed of speech
+  utterance.rate = 1 // Speed of speech
   utterance.pitch = 1; // Pitch of speech
 
   // Handling the 'end' event to perform actions after the speech has finished
